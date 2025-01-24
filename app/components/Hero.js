@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import { PlayIcon } from "@heroicons/react/20/solid";
 import { Download } from "lucide";
+import { InformationCircleIcon } from "@heroicons/react/24/outline";
 
 const Hero = ({ moviesBulk }) => {
   console.log(moviesBulk);
@@ -51,11 +52,27 @@ const Hero = ({ moviesBulk }) => {
                     your screen.
                   </p>
                   <div className="flex space-x-2">
-                    <button className=" py-1.5 px-3 text-sm text-white rounded bg-blue-900 flex items-center justify-center gap-1">
+                    <button className=" py-1.5 px-3 text-sm text-white rounded bg-red-800 flex items-center justify-center gap-1">
                       <PlayIcon className="size-4"></PlayIcon> Watch Now
                     </button>
-                    <button className=" py-1.5 px-3 text-sm text-white rounded">
-                      <Download className="size-3"></Download>
+                    <button className="py-1.5 px-3 text-sm text-white rounded bg-white/40 hover:bg-white/60 backdrop-blur-lg">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="size-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        />
+                      </svg>
+                    </button>
+                    <button className="py-1.5 px-3 text-sm text-white rounded bg-white/40 hover:bg-white/60 backdrop-blur-lg">
+                      <InformationCircleIcon className="size-4"></InformationCircleIcon>
                     </button>
                   </div>
                 </div>
