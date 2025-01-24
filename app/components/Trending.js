@@ -14,23 +14,9 @@ const movies = [
   },
 ];
 
-async function fetchPortfolios() {
-  try {
-    const res = await fetch("https://yts.mx/api/v2/list_movies.json");
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
-    const portfolios = await res.json();
-    return portfolios;
-  } catch (error) {
-    console.error("Error fetching portfolios:", error);
-    return [];
-  }
-}
-
 const Trending = async () => {
-  const moviesBulk = await fetchPortfolios();
-  console.log(moviesBulk);
+  //   const moviesBulk = await fetchPortfolios();
+  //   console.log(moviesBulk);
   return (
     <div className="py-16">
       <div className="w-11/12 mx-auto p-4 space-y-2">
