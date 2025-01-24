@@ -19,12 +19,17 @@ const Hero = ({ moviesBulk }) => {
               }}
             >
               <div className="flex flex-col items-start justify-end h-full bg-gradient-to-t from-black to-transparent rounded-xl p-10">
-                <div className="space-y-4">
+                <div className="space-y-4 flex flex-col items-start justify-end">
                   <h1 className="text-6xl font-bold text-white">
                     {movie.title_english}
                   </h1>
-                  <p className="text-xl text-white">
-                    The ultimate destination for movie enthusiasts
+                  <p className="text-sm text-white text-start">
+                    ScreenVerse is the ultimate destination for movie
+                    enthusiasts. Dive into a universe of films, where you can
+                    upload, explore, and share your favorite movies. With a
+                    sleek, user-friendly interface and a vast library of
+                    content, ScreenVerse brings the magic of cinema right to
+                    your screen.
                   </p>
                 </div>
               </div>
