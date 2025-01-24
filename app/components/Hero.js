@@ -28,7 +28,7 @@ const Hero = ({ moviesBulk }) => {
                 backgroundImage: `url(${movie.background_image_original})`,
               }}
             >
-              <div className="flex flex-col items-start justify-end h-full bg-gradient-to-t from-black to-transparent rounded-xl p-10">
+              <div className="flex flex-col items-start justify-end h-full bg-gradient-to-t from-black to-transparent rounded-xl p-5 md:p-10">
                 <div className="space-y-4 flex flex-col items-start justify-end">
                   <div className="flex space-x-2">
                     {movie.genres.map((genre) => (
@@ -40,10 +40,10 @@ const Hero = ({ moviesBulk }) => {
                       </p>
                     ))}
                   </div>
-                  <h1 className="text-6xl font-bold text-white text-start leading-tight">
+                  <h1 className="text-3xl md:text-6xl font-bold text-white text-start leading-tight">
                     {movie.title_english}
                   </h1>
-                  <p className="text-sm text-white text-start">
+                  <p className="text-xs/5 md:text-sm text-white text-start md:w-10/12">
                     ScreenVerse is the ultimate destination for movie
                     enthusiasts. Dive into a universe of films, where you can
                     upload, explore, and share your favorite movies. With a
