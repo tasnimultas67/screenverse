@@ -27,15 +27,17 @@ const Trending = () => {
               key={movie.id}
               className="relative bottom-0 left-0 group/locationHover"
             >
-              <div className="shrink-0 relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-gray-900">
+              <div className="shrink-0 relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
                 <img src={movie.img} alt={movie.title} />
               </div>
               {/* Movies Information */}
-              <div className="absolute inset-x-2 inset-y-2 flex items-end justify-start z-10 p-2">
+              <div className="absolute inset-0 flex flex-col items-start justify-end z-10 p-4 space-y-2">
                 <h2 className="text-white text-base/5 font-semibold tracking-tight">
                   {movie.title}
                 </h2>
-                <p>{movie.description}</p>
+                <p className="text-sm text-gray-200 tracking-tight">
+                  {movie.description}
+                </p>
               </div>
             </div>
           ))}
