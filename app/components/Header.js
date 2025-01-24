@@ -7,10 +7,6 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
 } from "@headlessui/react";
 import {
   ArrowPathIcon,
@@ -68,7 +64,7 @@ const callsToAction = [
 const menus = [
   { title: "Home", href: "/" },
   { title: "Browse Movies", href: "/browse-movies" },
-  { title: "Tending", href: "/tending" },
+  { title: "Trending", href: "/trending" },
   { title: "Categories", href: "/categories" },
 ];
 
