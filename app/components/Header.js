@@ -72,7 +72,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200 fixed inset-x-0 top-0 z-20">
+    <header className="bg-white border-b border-gray-200 sticky inset-x-0 top-0 z-20">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-5"
