@@ -17,7 +17,7 @@ const movies = [
 const Trending = () => {
   return (
     <div className="py-16">
-      <div className="container mx-auto p-4 space-y-2">
+      <div className="w-11/12 mx-auto p-4 space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">
           Trending Movies
         </h1>
@@ -25,14 +25,16 @@ const Trending = () => {
           {movies.map((movie) => (
             <div
               key={movie.id}
-              className="border p-4 rounded-md relative top-0"
+              className="relative bottom-0 left-0 group/locationHover"
             >
-              <div>
+              <div className="shrink-0 relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-gray-900">
                 <img src={movie.img} alt={movie.title} />
               </div>
               {/* Movies Information */}
-              <div>
-                <h2>{movie.title}</h2>
+              <div className="absolute inset-x-2 inset-y-2 flex items-end justify-start z-10 p-2">
+                <h2 className="text-white text-base/5 font-semibold tracking-tight">
+                  {movie.title}
+                </h2>
                 <p>{movie.description}</p>
               </div>
             </div>
