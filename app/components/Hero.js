@@ -20,7 +20,17 @@ const Hero = ({ moviesBulk }) => {
             >
               <div className="flex flex-col items-start justify-end h-full bg-gradient-to-t from-black to-transparent rounded-xl p-10">
                 <div className="space-y-4 flex flex-col items-start justify-end">
-                  <h1 className="text-6xl font-bold text-white">
+                  <div className="flex space-x-2">
+                    {movie.genres.map((genre) => (
+                      <p
+                        key={genre}
+                        className="text-xs text-white bg-white/10 backdrop-blur-md p-1 px-2 rounded-md border border-white/10"
+                      >
+                        {genre}
+                      </p>
+                    ))}
+                  </div>
+                  <h1 className="text-6xl font-bold text-white text-start leading-tight">
                     {movie.title_english}
                   </h1>
                   <p className="text-sm text-white text-start">
