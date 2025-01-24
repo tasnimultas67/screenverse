@@ -25,10 +25,14 @@ const Trending = () => {
           {movies.map((movie) => (
             <div
               key={movie.id}
-              className="relative bottom-0 left-0 group/locationHover"
+              className="relative bottom-0 left-0 group/movie-card"
             >
               <div className="shrink-0 relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
-                <img src={movie.img} alt={movie.title} />
+                <img
+                  src={movie.img}
+                  alt={movie.title}
+                  className="group-hover/movie-card:scale-105 transition-transform duration-500"
+                />
               </div>
               {/* Movies Information */}
               <div className="absolute inset-0 flex flex-col items-start justify-end z-10 p-4 space-y-2">
