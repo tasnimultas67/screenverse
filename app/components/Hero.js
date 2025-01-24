@@ -2,10 +2,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
-import { PlayIcon, PlayPauseIcon } from "@heroicons/react/20/solid";
+import { PlayIcon } from "@heroicons/react/20/solid";
+import { Download } from "lucide";
 
 const Hero = ({ moviesBulk }) => {
   console.log(moviesBulk);
@@ -56,7 +55,7 @@ const Hero = ({ moviesBulk }) => {
                       <PlayIcon className="size-4"></PlayIcon> Watch Now
                     </button>
                     <button className=" py-1.5 px-3 text-sm text-white rounded">
-                      Download Now
+                      <Download className="size-3"></Download>
                     </button>
                   </div>
                 </div>
