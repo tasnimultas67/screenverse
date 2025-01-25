@@ -9,4 +9,3 @@ const page = () => {
 };
 
 export default page;
-<h2>browse-movies</h2>;
