@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
 import Latest from "./components/Latest";
+import TopIMDRated from "./components/TopIMDRated";
 
 async function fetchPortfolios() {
   try {
@@ -29,6 +30,8 @@ export default async function Home() {
         <Latest moviesBulk={moviesBulk}></Latest>
         {/* Trending Movies */}
         <Trending moviesBulk={moviesBulk}></Trending>
+        {/* Top IMDB Rated Movies */}
+        <TopIMDRated moviesBulk={moviesBulk}></TopIMDRated>
       </div>
     </>
   );
