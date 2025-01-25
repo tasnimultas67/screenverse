@@ -7,6 +7,7 @@ import { PlayIcon } from "@heroicons/react/20/solid";
 import { Download } from "lucide";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import "../globals.css";
+import Link from "next/link";
 
 const Hero = ({ moviesBulk }) => {
   const progressCircle = useRef(null);
@@ -80,8 +81,13 @@ const Hero = ({ moviesBulk }) => {
                         />
                       </svg>
                     </button>
-                    <button className="py-1.5 px-3 text-sm text-white rounded bg-white/40 hover:bg-white/60 backdrop-blur-lg">
-                      <InformationCircleIcon className="size-4"></InformationCircleIcon>
+                    <button className=" text-sm text-white rounded bg-white/40 hover:bg-white/60 backdrop-blur-lg">
+                      <Link
+                        href={`/browse-movies/${movie.id}`}
+                        className="py-1.5 px-3 flex items-center justify-center gap-1"
+                      >
+                        <InformationCircleIcon className="size-4"></InformationCircleIcon>
+                      </Link>
                     </button>
                   </div>
                 </div>
