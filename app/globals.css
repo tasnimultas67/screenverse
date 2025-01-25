@@ -74,10 +74,12 @@ body {
   transform: rotate(-90deg);
 }
 
-.swiper-button-next:after{
-  color: yellow;
-font-size: 16px!important;;
+.swiper-button-next::after,
+.swiper-button-prev::after {
   background-color: white;
-  padding: 10px;
-  border-radius: 500px;
+  padding: 8px 12px;
+  font-size:17px!important;
+  border-radius: 100%;
+  border: 1px solid ;
+  color: red;
 }
