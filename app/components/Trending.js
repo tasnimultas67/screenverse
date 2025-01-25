@@ -4,7 +4,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 
 const Trending = ({ moviesBulk }) => {
   return (
@@ -15,12 +16,14 @@ const Trending = ({ moviesBulk }) => {
         </h1>
         <div className="">
           <Swiper
+            // navigation={true}
             slidesPerView={4}
             spaceBetween={10}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            navigation={true}
+            modules={[Pagination, Navigation]}
             className="mySwiper"
           >
             {moviesBulk.data.movies.slice(0, 10).map((movie) => (
