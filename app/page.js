@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/Hero";
 import Trending from "./components/Trending";
+import Latest from "./components/Latest";
 
 async function fetchPortfolios() {
   try {
@@ -21,8 +22,11 @@ export default async function Home() {
   //   console.log(moviesBulk);
   return (
     <>
-      <div>
+      <div className="divide-y divide-gray-200">
+        {/* Hero */}
         <Hero moviesBulk={moviesBulk}></Hero>
+        {/* Latest Movies */}
+        <Latest moviesBulk={moviesBulk}></Latest>
         {/* Trending Movies */}
         <Trending moviesBulk={moviesBulk}></Trending>
       </div>

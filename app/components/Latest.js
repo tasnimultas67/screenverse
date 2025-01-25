@@ -7,13 +7,11 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 
-const Trending = ({ moviesBulk }) => {
+const Latest = ({ moviesBulk }) => {
   return (
     <div className="py-16">
       <div className="w-11/12 mx-auto p-4 space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          Trending Movies
-        </h1>
+        <h1 className="text-3xl font-semibold tracking-tight">Latest Movies</h1>
         <div className="">
           <Swiper
             // navigation={true}
@@ -56,4 +54,4 @@ const Trending = ({ moviesBulk }) => {
   );
 };
 
-export default Trending;
+export default Latest;
