@@ -1,23 +1,32 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import { PlayIcon } from "@heroicons/react/20/solid";
 import { Download } from "lucide";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import "../globals.css";
 
 const Hero = ({ moviesBulk }) => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
   console.log(moviesBulk);
   return (
     <div className="py-1 w-[98%] m-auto">
       <Swiper
         spaceBetween={5}
+        // effect={"fade"}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[Autoplay]}
+        modules={[Autoplay, EffectFade]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper rounded-xl"
       >
         {moviesBulk.data.movies.slice(0, 10).map((movie) => (
@@ -80,6 +89,12 @@ const Hero = ({ moviesBulk }) => {
             </div>
           </SwiperSlide>
         ))}
+        <div className="autoplay-progress" slot="container-end">
+          <svg viewBox="0 0 48 48" ref={progressCircle}>
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref={progressContent}></span>
+        </div>
       </Swiper>
     </div>
   );
