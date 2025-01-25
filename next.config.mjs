@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "goldendiscs.ie",
       },
+      {
+        protocol: "https",
+        hostname: "yts.mx",
+      },
     ],
   },
 };

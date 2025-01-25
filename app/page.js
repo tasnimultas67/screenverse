@@ -24,7 +24,7 @@ export default async function Home() {
       <div>
         <Hero moviesBulk={moviesBulk}></Hero>
         {/* Trending Movies */}
-        <Trending></Trending>
+        <Trending moviesBulk={moviesBulk}></Trending>
       </div>
     </>
   );
