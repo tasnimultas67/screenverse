@@ -24,7 +24,7 @@ const Latest = ({ moviesBulk }) => {
   };
   return (
     <div className="py-6">
-      <div className="w-[98%] m-auto p-4 space-y-2">
+      <div className="w-[98%] m-auto space-y-2">
         <motion.h1
           variants={fadeInUp}
           initial="hidden"
@@ -36,7 +36,18 @@ const Latest = ({ moviesBulk }) => {
         <div className="">
           <Swiper
             // navigation={true}
-            slidesPerView={4}
+            breakpoints={{
+              576: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 4,
+              },
+              1480: {
+                slidesPerView: 5,
+              },
+            }}
+            slidesPerView={1}
             spaceBetween={10}
             navigation={true}
             modules={[Navigation]}
@@ -51,8 +62,8 @@ const Latest = ({ moviesBulk }) => {
                   className=""
                 >
                   <Link href={`/browse-movies/${movie.id}`}>
-                    <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]">
-                      <div className=" relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
+                    <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[18rem] md:h-[21rem]">
+                      <div className=" relative rounded-lg overflow-hidden w-full h-[18rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
                         <Image
                           width={200}
                           height={400}
