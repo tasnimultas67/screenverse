@@ -20,12 +20,12 @@ const page = async () => {
   const moviesBulk = await fetchMoviesData();
   return (
     <div className="w-[98%] mx-auto space-y-2 py-10">
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {moviesBulk.data.movies.map((movie) => (
           <div className="" key={movie.id}>
             <Link href={`/browse-movies/${movie.id}`}>
-              <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]">
-                <div className=" relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
+              <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[18rem] md:h-[21rem]">
+                <div className=" relative rounded-lg overflow-hidden w-full h-[18rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
                   <Image
                     width={200}
                     height={400}
