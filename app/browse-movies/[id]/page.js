@@ -43,6 +43,16 @@ const page = async ({ params }) => {
               <Star className="size-4 fill-yellow-300 text-yellow-300"></Star>
               {movie.data.movie.rating}
             </p>
+            <div className="flex space-x-2">
+              {movie.data.movie.genres.map((genre) => (
+                <p
+                  key={genre}
+                  className="text-xs text-white bg-white/10 backdrop-blur-md p-1 px-2 rounded-md border border-white/10"
+                >
+                  {genre}
+                </p>
+              ))}
+            </div>
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {movie.data.movie.title}
             </h2>
