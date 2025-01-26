@@ -7,14 +7,32 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const TopIMDRated = ({ moviesBulk }) => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: 0.2,
+      },
+    },
+  };
   return (
     <div className="py-6">
       <div className="w-[98%] m-auto p-4 space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight">
+        <motion.h1
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          className="text-3xl font-semibold tracking-tight"
+        >
           Top IMDB Rated Movies
-        </h1>
+        </motion.h1>
         <div className="">
           <Swiper
             slidesPerView={4}
@@ -28,7 +46,12 @@ const TopIMDRated = ({ moviesBulk }) => {
               .reverse()
               .map((movie) => (
                 <SwiperSlide key={movie.id}>
-                  <div className="">
+                  <motion.div
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    className=""
+                  >
                     <Link href={`/browse-movies/${movie.id}`}>
                       <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]">
                         <div className=" relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
@@ -53,7 +76,7 @@ const TopIMDRated = ({ moviesBulk }) => {
                         </div>
                       </div>
                     </Link>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               ))}
           </Swiper>
