@@ -83,3 +83,8 @@ body {
   border: 1px solid ;
   color: red;
 }
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
