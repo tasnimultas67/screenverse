@@ -34,7 +34,7 @@ const page = async () => {
                     className="group-hover/movie-card:scale-105 transition-transform duration-500 w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 w-full z-[100] p-4 space-y-2 text-start flex items-start justify-start flex-col">
+                <div className="absolute bottom-0 left-0 w-full z-[10] p-4 space-y-2 text-start flex items-start justify-start flex-col">
                   <h2 className="text-white text-base/5 font-semibold tracking-tight">
                     {movie.title_english}
                   </h2>
