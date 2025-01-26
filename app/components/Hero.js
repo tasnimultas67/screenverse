@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import { PlayIcon } from "@heroicons/react/20/solid";
-import { Download } from "lucide";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import "../globals.css";
 import Link from "next/link";

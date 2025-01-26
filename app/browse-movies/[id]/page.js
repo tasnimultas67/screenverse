@@ -1,4 +1,6 @@
+import { Download } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -34,6 +36,20 @@ const page = async ({ params }) => {
           <h2 className="text-3xl font-bold tracking-tight">
             {movie.data.movie.title}
           </h2>
+          <div className="flex space-x-1">
+            {movie.data.movie.torrents &&
+              movie.data.movie.torrents.map((torrent) => (
+                <button key={torrent.url}>
+                  <Link
+                    className="bg-black text-white p-2 rounded-md px-4 flex items-center justify-center gap-1 text-xs"
+                    href={torrent.url}
+                  >
+                    <Download className="size-3" />
+                    {torrent.quality}
+                  </Link>
+                </button>
+              ))}
+          </div>
         </div>
       </div>
       {/* Summery */}
