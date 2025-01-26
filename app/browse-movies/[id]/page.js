@@ -28,8 +28,8 @@ const page = async ({ params }) => {
             className="rounded-xl border w-full "
             src={movie.data.movie.large_cover_image}
             alt=""
-            width={300}
-            height={600}
+            width={415}
+            height={620}
           ></Image>
         </div>
         <div
