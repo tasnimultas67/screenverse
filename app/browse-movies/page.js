@@ -19,7 +19,7 @@ async function fetchMoviesData() {
 const page = async () => {
   const moviesBulk = await fetchMoviesData();
   return (
-    <div className="w-[98%] mx-auto space-y-2 py-10">
+    <div className="w-[98%] mx-auto space-y-2 py-2 md:py-10">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
         {moviesBulk.data.movies.map((movie) => (
           <div className="" key={movie.id}>
