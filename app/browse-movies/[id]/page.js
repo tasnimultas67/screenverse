@@ -47,7 +47,7 @@ const page = async ({ params }) => {
               {movie.data.movie.genres.map((genre) => (
                 <p
                   key={genre}
-                  className="text-xs text-white bg-white/10 backdrop-blur-md p-1 px-2 rounded-md border border-white/10"
+                  className="text-xs text-gray-200 bg-white/10 backdrop-blur-md p-1 px-2 rounded-md border border-white/10"
                 >
                   {genre}
                 </p>
@@ -56,7 +56,10 @@ const page = async ({ params }) => {
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {movie.data.movie.title}
             </h2>
-            <p className="text-xs/5 md:text-sm text-white text-start md:w-10/12">
+            <p className="text-sm tracking-tight text-white">
+              {movie.data.movie.year}
+            </p>
+            <p className="text-xs/5 md:text-sm text-gray-300 text-start md:w-10/12">
               ScreenVerse is the ultimate destination for movie enthusiasts.
               Dive into a universe of films, where you can upload, explore, and
               share your favorite movies. With a sleek, user-friendly interface
