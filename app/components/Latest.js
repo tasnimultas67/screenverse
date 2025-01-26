@@ -7,12 +7,32 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const Latest = ({ moviesBulk }) => {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: 0.2,
+      },
+    },
+  };
   return (
     <div className="py-6">
       <div className="w-[98%] m-auto p-4 space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight">Latest Movies</h1>
+        <motion.h1
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          className="text-3xl font-semibold tracking-tight"
+        >
+          Latest Movies
+        </motion.h1>
         <div className="">
           <Swiper
             // navigation={true}
@@ -24,7 +44,12 @@ const Latest = ({ moviesBulk }) => {
           >
             {moviesBulk.data.movies.slice(0, 10).map((movie) => (
               <SwiperSlide key={movie.id}>
-                <div className="">
+                <motion.div
+                  variants={fadeInUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  className=""
+                >
                   <Link href={`/browse-movies/${movie.id}`}>
                     <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]">
                       <div className=" relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
@@ -48,7 +73,7 @@ const Latest = ({ moviesBulk }) => {
                       </div>
                     </div>
                   </Link>
-                </div>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
