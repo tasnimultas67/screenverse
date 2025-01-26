@@ -69,6 +69,7 @@ const page = async ({ params }) => {
                 movie.data.movie.torrents.map((torrent) => (
                   <button key={torrent.url}>
                     <Link
+                      target="_blank"
                       className="bg-white/20 hover:bg-white/30 transition-all backdrop-blur-lg text-white p-2 rounded-md px-4 flex items-center justify-center gap-1 text-xs border border-white/20"
                       href={torrent.url}
                     >
