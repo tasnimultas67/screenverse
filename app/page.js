@@ -23,7 +23,7 @@ export default async function Home() {
   //   console.log(moviesBulk);
   return (
     <>
-      <div className="divide-y divide-gray-200 w-[98%] m-auto">
+      <div className="divide-y divide-gray-200">
         {/* Hero */}
         <Hero moviesBulk={moviesBulk}></Hero>
         {/* Latest Movies */}
