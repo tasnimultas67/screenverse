@@ -25,6 +25,7 @@ const page = async ({ params }) => {
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-4">
         <div>
           <Image
+            priority={true}
             className="rounded-xl border w-full "
             src={movie.data.movie.large_cover_image}
             alt=""
