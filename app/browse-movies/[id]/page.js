@@ -60,11 +60,9 @@ const page = async ({ params }) => {
               {movie.data.movie.year}
             </p>
             <p className="text-xs/5 md:text-sm text-gray-300 text-start md:w-10/12">
-              ScreenVerse is the ultimate destination for movie enthusiasts.
-              Dive into a universe of films, where you can upload, explore, and
-              share your favorite movies. With a sleek, user-friendly interface
-              and a vast library of content, ScreenVerse brings the magic of
-              cinema right to your screen.
+              {movie.data.movie.description_full
+                ? movie.data.movie.description_full
+                : "ScreenVerse is the ultimate destination for movie enthusiasts. Dive into a universe of films, where you can upload, explore, and share your favorite movies. With a sleek, user-friendly interface and a vast library of content, ScreenVerse brings the magic of cinema right to your screen."}
             </p>
             <div className="flex space-x-1">
               {movie.data.movie.torrents &&
