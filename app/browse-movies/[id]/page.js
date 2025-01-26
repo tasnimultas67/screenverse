@@ -25,30 +25,37 @@ const page = async ({ params }) => {
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-4">
         <div>
           <Image
-            className="rounded-md border w-full "
+            className="rounded-xl border w-full "
             src={movie.data.movie.large_cover_image}
             alt=""
             width={300}
             height={600}
           ></Image>
         </div>
-        <div className="col-span-3 text-start">
-          <h2 className="text-3xl font-bold tracking-tight">
-            {movie.data.movie.title}
-          </h2>
-          <div className="flex space-x-1">
-            {movie.data.movie.torrents &&
-              movie.data.movie.torrents.map((torrent) => (
-                <button key={torrent.url}>
-                  <Link
-                    className="bg-black text-white p-2 rounded-md px-4 flex items-center justify-center gap-1 text-xs"
-                    href={torrent.url}
-                  >
-                    <Download className="size-3" />
-                    {torrent.quality}
-                  </Link>
-                </button>
-              ))}
+        <div
+          className="col-span-3 text-start w-full m-auto bg-cover bg-center rounded-xl h-full"
+          style={{
+            backgroundImage: `url(${movie.data.movie.background_image_original})`,
+          }}
+        >
+          <div className=" bg-gradient-to-r from-black to-transparent  p-3 md:p-8 h-full rounded-xl flex flex-col justify-end space-y-2">
+            <h2 className="text-3xl font-bold tracking-tight text-white">
+              {movie.data.movie.title}
+            </h2>
+            <div className="flex space-x-1">
+              {movie.data.movie.torrents &&
+                movie.data.movie.torrents.map((torrent) => (
+                  <button key={torrent.url}>
+                    <Link
+                      className="bg-black text-white p-2 rounded-md px-4 flex items-center justify-center gap-1 text-xs border border-gray-600"
+                      href={torrent.url}
+                    >
+                      <Download className="size-3" />
+                      {torrent.quality}
+                    </Link>
+                  </button>
+                ))}
+            </div>
           </div>
         </div>
       </div>
