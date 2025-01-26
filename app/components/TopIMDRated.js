@@ -10,7 +10,7 @@ import { Navigation } from "swiper/modules";
 const TopIMDRated = ({ moviesBulk }) => {
   return (
     <div className="py-16">
-      <div className="w-11/12 mx-auto p-4 space-y-2">
+      <div className="p-4 space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">
           Top IMDB Rated Movies
         </h1>

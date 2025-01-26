@@ -18,7 +18,7 @@ const Hero = ({ moviesBulk }) => {
   };
   console.log(moviesBulk);
   return (
-    <div className="py-1 w-[98%] m-auto">
+    <div className="py-1 ">
       <Swiper
         spaceBetween={5}
         // effect={"fade"}
