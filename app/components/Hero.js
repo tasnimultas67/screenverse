@@ -22,7 +22,7 @@ const Hero = ({ moviesBulk }) => {
         spaceBetween={5}
         // effect={"fade"}
         autoplay={{
-          delay: 2500,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, EffectFade]}
