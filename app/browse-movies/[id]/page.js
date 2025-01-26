@@ -20,7 +20,7 @@ const page = async ({ params }) => {
     notFound();
   }
   return (
-    <div className="py-14 w-11/12 m-auto space-y-2">
+    <div className="py-4 w-[98%] m-auto space-y-3">
       {/* Hero Section */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-4">
         <div>
@@ -43,7 +43,7 @@ const page = async ({ params }) => {
               <Star className="size-4 fill-yellow-300 text-yellow-300"></Star>
               {movie.data.movie.rating}
             </p>
-            <div className="flex space-x-2">
+            <div className="flex space-x-1">
               {movie.data.movie.genres.map((genre) => (
                 <p
                   key={genre}
