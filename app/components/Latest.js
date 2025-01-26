@@ -24,12 +24,9 @@ const Latest = ({ moviesBulk }) => {
           >
             {moviesBulk.data.movies.slice(0, 10).map((movie) => (
               <SwiperSlide key={movie.id}>
-                <div>
-                  <Link
-                    href={`/browse-movies/${movie.id}`}
-                    className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]"
-                  >
-                    <div className="w-full">
+                <div className="">
+                  <Link href={`/browse-movies/${movie.id}`}>
+                    <div className="relative top-0 left-0 group/movie-card w-full bg-slate-50 h-[10rem] md:h-[21rem]">
                       <div className=" relative rounded-lg overflow-hidden w-full h-[10rem] md:h-[21rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-black">
                         <Image
                           width={200}
@@ -39,8 +36,7 @@ const Latest = ({ moviesBulk }) => {
                           className="group-hover/movie-card:scale-105 transition-transform duration-500 w-full h-full object-cover"
                         />
                       </div>
-                      {/* Movies Information */}
-                      <div className="absolute  w-full z-[100] p-4 space-y-2 text-start bg-slate-500 flex items-start justify-start flex-col">
+                      <div className="absolute bottom-0 left-0 w-full z-[100] p-4 space-y-2 text-start flex items-start justify-start flex-col">
                         <h2 className="text-white text-base/5 font-semibold tracking-tight">
                           {movie.title_english}
                         </h2>
