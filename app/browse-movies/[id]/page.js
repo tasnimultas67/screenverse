@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { Download, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -38,7 +38,11 @@ const page = async ({ params }) => {
             backgroundImage: `url(${movie.data.movie.background_image_original})`,
           }}
         >
-          <div className=" bg-gradient-to-r from-black to-transparent  p-3 md:p-8 h-full rounded-xl flex flex-col justify-end space-y-2">
+          <div className=" bg-gradient-to-r from-black to-transparent  p-3 md:p-8 h-full rounded-xl flex flex-col justify-end space-y-3">
+            <p className="text-sm tracking-tight text-white flex items-center gap-1">
+              <Star className="size-4 fill-yellow-300 text-yellow-300"></Star>
+              {movie.data.movie.rating}
+            </p>
             <h2 className="text-3xl font-bold tracking-tight text-white">
               {movie.data.movie.title}
             </h2>
