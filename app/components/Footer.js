@@ -1,6 +1,7 @@
 import React from "react";
 
 const Footer = () => {
+  const copyRight = new Date().getFullYear();
   return (
     <div className="p-1">
       <footer className="bg-gray-800 rounded-md">
@@ -35,7 +36,7 @@ const Footer = () => {
           </div>
           <div className="container mx-auto px-6 py-4">
             <p className="text-center text-white text-sm">
-              © 2021 ScreenVerse. All rights reserved.
+              © {copyRight} ScreenVerse. All rights reserved.
             </p>
           </div>
         </div>
