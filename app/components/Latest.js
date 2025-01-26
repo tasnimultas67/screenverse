@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const Latest = ({ moviesBulk }) => {
   return (
-    <div className="py-16">
+    <div className="py-6">
       <div className="w-[98%] m-auto p-4 space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Latest Movies</h1>
         <div className="">
