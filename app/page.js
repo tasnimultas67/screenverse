@@ -4,22 +4,22 @@ import Trending from "./components/Trending";
 import Latest from "./components/Latest";
 import TopIMDRated from "./components/TopIMDRated";
 
-async function fetchPortfolios() {
+async function fetchMoviesData() {
   try {
     const res = await fetch("https://yts.mx/api/v2/list_movies.json");
     if (!res.ok) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }
-    const portfolios = await res.json();
-    return portfolios;
+    const movies = await res.json();
+    return movies;
   } catch (error) {
-    console.error("Error fetching portfolios:", error);
+    console.error("Error fetching movies:", error);
     return [];
   }
 }
 
 export default async function Home() {
-  const moviesBulk = await fetchPortfolios();
+  const moviesBulk = await fetchMoviesData();
   //   console.log(moviesBulk);
   return (
     <>
