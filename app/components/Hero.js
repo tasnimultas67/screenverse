@@ -7,6 +7,7 @@ import { PlayIcon } from "@heroicons/react/20/solid";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
 import "../globals.css";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 const Hero = ({ moviesBulk }) => {
   const progressCircle = useRef(null);
@@ -16,8 +17,25 @@ const Hero = ({ moviesBulk }) => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   console.log(moviesBulk);
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: 0.2,
+      },
+    },
+  };
   return (
-    <div className="py-1 w-[98%] m-auto">
+    <motion.div
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      className="py-1 w-[98%] m-auto"
+    >
       <Swiper
         spaceBetween={5}
         // effect={"fade"}
@@ -101,7 +119,7 @@ const Hero = ({ moviesBulk }) => {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 
