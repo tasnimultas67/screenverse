@@ -10,7 +10,7 @@ import { Navigation } from "swiper/modules";
 const Trending = ({ moviesBulk }) => {
   return (
     <div className="py-16">
-      <div className="p-4 space-y-2">
+      <div className="w-[98%] m-auto p-4 space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">
           Trending Movies
         </h1>
