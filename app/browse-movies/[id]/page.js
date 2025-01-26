@@ -20,7 +20,7 @@ const page = async ({ params }) => {
     notFound();
   }
   return (
-    <div className="py-4 w-[98%] m-auto space-y-3">
+    <div className="py-4 w-[98%] m-auto space-y-2">
       {/* Hero Section */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-4">
         <div>
