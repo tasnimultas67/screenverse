@@ -47,7 +47,7 @@ const Hero = ({ moviesBulk }) => {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper rounded-xl"
       >
-        {moviesBulk.data.movies.slice(0, 10).map((movie) => (
+        {moviesBulk?.data?.movies.slice(0, 10).map((movie) => (
           <SwiperSlide key={movie.id}>
             <div
               className="h-[90dvh] w-full m-auto bg-cover bg-center rounded-xl"
