@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -15,15 +16,16 @@ const Footer = () => {
           </div>
           <div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 w-6/12 mx-auto">
-              <div>
+              <div className="space-y-2">
                 <h2 className="text-white text-sm font-bold">Call Us</h2>
                 <p className="text-gray-300 text-sm">1-800-123-4567</p>
               </div>
-              <div>
-                <h2 className="text-white text-sm">Follow Us</h2>
-                <div className="grid grid-cols-3">
+              {/* Follow Us */}
+              <div className="space-y-2">
+                <h2 className="text-white text-sm font-semibold">Follow Us</h2>
+                <div className="flex space-x-2">
                   <Link href="#">
-                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
+                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor border border-white/50">
                       <svg
                         className="size-4 !fill-white "
                         xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +37,7 @@ const Footer = () => {
                   </Link>
                   {/* Instagram LInk */}
                   <Link href="#">
-                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
+                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor border border-white/50">
                       <svg
                         className="size-4 !fill-white "
                         xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,7 @@ const Footer = () => {
                   </Link>
                   {/* Youtube Link */}
                   <Link href="#">
-                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
+                    <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor border border-white/50">
                       <svg
                         className="size-4 !fill-white "
                         xmlns="http://www.w3.org/2000/svg"
@@ -59,15 +61,29 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
-              <div>
-                <h2 className="text-white text-sm">Download App</h2>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-white">
-                    <i className="fab fa-apple"></i>
-                  </a>
-                  <a href="#" className="text-white">
-                    <i className="fab fa-android"></i>
-                  </a>
+              {/* App Download */}
+              <div className="space-y-2">
+                <h2 className="text-white text-sm font-semibold">
+                  Download App
+                </h2>
+                <div className="flex items-start gap-2">
+                  <Link href="https://tasnimul.vercel.app/" target="_blank">
+                    <Image
+                      className=""
+                      src="/google-play.svg"
+                      width={100}
+                      height={50}
+                      alt="Google Play Store"
+                    />
+                  </Link>
+                  <Link href="https://tasnimul.vercel.app/" target="_blank">
+                    <Image
+                      src="/app-store.svg"
+                      width={100}
+                      height={50}
+                      alt="Apple App Store"
+                    />
+                  </Link>
                 </div>
               </div>
             </div>
